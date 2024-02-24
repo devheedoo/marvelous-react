@@ -12,7 +12,7 @@ const Home = () => {
         <div>
           {characters.map((character) => {
             return (
-              <div>
+              <div key={character.id}>
                 <Link to={`/character/${character.id}`}>{character.name}</Link>
               </div>
             );

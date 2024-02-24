@@ -13,9 +13,9 @@ const CharacterDetail = () => {
         <div>
           <h2>Hi, I'm {detail.name}</h2>
           {detail.thumbnail.path}
-          {detail.urls.map((item) => {
+          {detail.urls.map((item, index) => {
             return (
-              <ul>
+              <ul key={index}>
                 <li>{item.type}</li>
                 <li>{item.url}</li>
               </ul>
