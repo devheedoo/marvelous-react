@@ -40,8 +40,7 @@ const Home = () => {
           {characters.map((character) => {
             return (
               <div>
-                {character.name}
-                <Link to={`/character/${character.id}`} />
+                <Link to={`/character/${character.id}`}>{character.name}</Link>
               </div>
             );
           })}
