@@ -7,7 +7,9 @@ import { useEffect, useState } from "react";
  * @property {string} resourceURI
  * @property {Thumbnail} thumbnail
  * @property {Url[]} urls
- * @property {Series} series
+ * @property {Collections} comics
+ * @property {Collections} series
+ * @property {Collections} stories
  */
 
 /**
@@ -23,12 +25,12 @@ import { useEffect, useState } from "react";
  */
 
 /**
- * @typedef Series
- * @property {SeriesItem[]} items
+ * @typedef Collections
+ * @property {Item[]} items
  */
 
 /**
- * @typedef SeriesItem
+ * @typedef Item
  * @property {string} name
  */
 
