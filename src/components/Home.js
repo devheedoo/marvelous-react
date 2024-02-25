@@ -9,7 +9,9 @@ const Home = () => {
 
   return (
     <div className={commonStyles.container}>
-      <h1 className={commonStyles.pageTitle}>MARVEL.characters</h1>
+      <h1 className={commonStyles.pageTitle}>
+        <Link to="/">MARVEL.characters</Link>
+      </h1>
       {isLoading && <p>Loading...</p>}
       {!isLoading && (
         <div className={styles.charactersContainer}>
