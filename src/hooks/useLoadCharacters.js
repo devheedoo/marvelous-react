@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
  * @property {string} resourceURI
  * @property {Thumbnail} thumbnail
  * @property {Url[]} urls
+ * @property {Series} series
  */
 
 /**
@@ -19,6 +20,16 @@ import { useEffect, useState } from "react";
  * @typedef Url
  * @property {string} type
  * @property {string} url
+ */
+
+/**
+ * @typedef Series
+ * @property {SeriesItem[]} items
+ */
+
+/**
+ * @typedef SeriesItem
+ * @property {string} name
  */
 
 const useLoadCharacters = () => {
