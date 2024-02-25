@@ -1,20 +1,35 @@
 import { Link } from "react-router-dom";
 import useLoadCharacters from "../hooks/useLoadCharacters";
 
+import styles from "./Home.module.css";
+
 const Home = () => {
   const { characters, isLoading } = useLoadCharacters();
 
   return (
-    <div>
-      <h1>Hello World</h1>
+    <div className={styles.container}>
+      <h1 className={styles.pageTitle}>MARVEL.characters</h1>
       {isLoading && <p>Loading...</p>}
       {!isLoading && (
-        <div>
+        <div className={styles.charactersContainer}>
           {characters.map((character) => {
+            const { id, name, thumbnail, series } = character;
+            const [seriesName, seriesYear] = series.items[0].name.split(" (");
+
             return (
-              <div key={character.id}>
-                <Link to={`/character/${character.id}`}>{character.name}</Link>
-              </div>
+              <Link
+                to={`/character/${id}`}
+                key={id}
+                className={styles.characterCard}
+              >
+                <img src={`${thumbnail.path}.${thumbnail.extension}`} />
+                <span className={styles.characterCardName}>{name}</span>
+                <p className={styles.characterCardSeries}>
+                  {seriesName}
+                  <br />
+                  {`(${seriesYear}`}
+                </p>
+              </Link>
             );
           })}
         </div>
