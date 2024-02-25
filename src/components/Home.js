@@ -1,14 +1,15 @@
 import { Link } from "react-router-dom";
 import useLoadCharacters from "../hooks/useLoadCharacters";
 
+import commonStyles from "./common.module.css";
 import styles from "./Home.module.css";
 
 const Home = () => {
   const { characters, isLoading } = useLoadCharacters();
 
   return (
-    <div className={styles.container}>
-      <h1 className={styles.pageTitle}>MARVEL.characters</h1>
+    <div className={commonStyles.container}>
+      <h1 className={commonStyles.pageTitle}>MARVEL.characters</h1>
       {isLoading && <p>Loading...</p>}
       {!isLoading && (
         <div className={styles.charactersContainer}>
