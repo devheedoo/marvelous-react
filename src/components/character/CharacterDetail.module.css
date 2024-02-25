@@ -1,0 +1,52 @@
+.container {
+  text-decoration: none;
+  color: #e5e0d8d9;
+  font-family: monospace;
+  text-align: center;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  column-gap: 32px;
+
+  height: 300px;
+  clip-path: polygon(0 100%, 0 0, 100% 0, 100% 90%, 0 100%);
+  background-color: #151515;
+  overflow-y: hidden;
+}
+
+.profile > img {
+  object-fit: cover;
+  width: 35vw;
+}
+
+.profile > h2 {
+  color: white;
+  font-weight: bolder;
+  font-size: 48px;
+}
+
+.collectionContainer {
+  display: grid;
+  row-gap: 64px;
+  padding: 32px;
+}
+
+.collection > h3 {
+  display: inline-block;
+  font-size: 24px;
+  font-weight: bold;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #e5e0d8d9;
+}
+
+.collection > ul {
+  margin-top: 24px;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: left;
+  list-style: square;
+  padding-left: 16px;
+}
